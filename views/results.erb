@@ -6,3 +6,10 @@
 <p> Hello, <%= @user.name %>! You are <%= @user.risk %> % more likely than the general population to develop or become diagnosed with early-onset familial Alzheimer's Disease. Please follow up with a genetic counselor. </p>
 <% end %>
 
+<% if @user.app.to_bool == true  %>
+<p>You may also be predisposed to hereditary cerebral amyloid angiopathy, a condition also linked to mutations in the APP gene, where amyloid plaques deposit in the walls of blood vessel, increasing the risk of hemorrhagic stroke. Please follow up with a genetic counselor. </p>
+<% end %>
+
+  <div class="col-md-4 col-md-offset-4 ">
+          <a href="/" class="btn btn-block btn-lg btn-info">Return Home</a>
+  </div>
