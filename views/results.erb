@@ -1,9 +1,9 @@
 <% if @user.high_risk && @user.low_risk  %>
 
-<p> Hello, <%= @user.name %>! You are <%= @user.low_risk %>% to <%= @user.high_risk %>% more likely than the general population to develop or become diagnosed with early-onset familial Alzheimer's Disease. Please follow up with a genetic counselor.</p>
+<p> Hello, <%= @user.name %>! You are <%= @user.low_risk %>% to <%= @user.high_risk %>% more likely than the general population to develop or become diagnosed with early-onset  Alzheimer's Disease. Please follow up with a genetic counselor.</p>
  
 <% else %>
-<p> Hello, <%= @user.name %>! You are <%= @user.risk %> % more likely than the general population to develop or become diagnosed with early-onset familial Alzheimer's Disease. Please follow up with a genetic counselor. </p>
+<p> Hello, <%= @user.name %>! You are <%= @user.risk %> % more likely than the general population to develop or become diagnosed with early-onset Alzheimer's Disease. Please follow up with a genetic counselor. </p>
 <% end %>
 
 <% if @user.app.to_bool == true  %>
