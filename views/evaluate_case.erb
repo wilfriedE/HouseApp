@@ -1,0 +1,143 @@
+<div  class="container">
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<form  role="form" class="table table-hover" action="/analyze" method="post">
+
+     <div class="form-group">
+    <label class="sr-only" for="name">Name</label>
+    <input type="hidden" class="form-control"  value="<%= params[:name]%>" name="name" id="name" placeholder="Enter Name">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="age">Age</label>
+    <input type="hidden" name="age" class="form-control" value="<%= params[:age]%>" id="age" placeholder="Age">
+  </div>
+ 
+          <table width="100%" class="table table-hover">
+              <tr class="row">
+              <td class="pbm col-md-10 ">
+                  Positive for the Presence of Amyloid Precursor Protein (APP)
+gene mutation              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                  <input type="checkbox" value="true" name="app">
+                </div>
+              </td>
+            </tr>
+        
+              <tr class="row">
+              <td class="pbm col-md-10">
+                 Positive for the Presence of Presenilin 1 (PSEN 1)
+gene mutation
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                 <input type="checkbox" value="true" name="psen1">     
+                </div>
+              </td>
+            </tr>
+          
+            <tr class="row">
+              <td class="pbm col-md-10">
+                 Positive for the Presence of Presenilin 2 (PSEN 2)
+gene mutation
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                  <input type="checkbox" value="true" name="psen2"> 
+                </div>
+              </td>
+            </tr>
+       
+               <tr class="row">
+              <td class="pbm col-md-10">
+                   Positive diagnosis of Down Syndrome
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                  <input type="checkbox" value="true" name="ds">
+                </div>
+              </td>
+            </tr>
+     
+             <tr class="row">
+              <td class="pbm col-md-10">
+                   Biological Father has had positive diagnosis for Early-Onset Alzheimer's Disease 
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                  <input type="checkbox" value="true" name="father">
+                </div>
+              </td>
+            </tr>
+      
+               <tr class="row">
+              <td class="pbm col-md-10">
+                 Biological Mother has had positive diagnosis for Early-Onset Alzheimer's Disease
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                 <input type="checkbox" value="true" name="mother"> 
+                </div>
+              </td>
+            </tr>
+       
+                 <tr class="row">
+              <td class="pbm col-md-10">
+                   Biological Maternal Grandfather has had positive diagnosis for Early-Onset Alzheimer's Disease
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                    <input type="checkbox" value="true" name="mgramp">
+                </div>
+              </td>
+            </tr>
+      
+                <tr class="row">
+              <td class="pbm col-md-10">
+                  Biological Maternal Grandmother has had positive diagnosis for Early-Onset Alzheimer's Disease
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                  <input type="checkbox" value="true" name="mgram">
+                </div>
+              </td>
+            </tr>
+       
+                  <tr class="row">
+              <td class="pbm col-md-10">
+                  Biological Paternal Grandfather has had positive diagnosis for Early-Onset Alzheimer's Disease
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                 <input type="checkbox" value="true" name="pgram"> 
+                </div>
+              </td>
+            </tr>
+    
+              <tr class="row">
+              <td class="pbm col-md-10">
+                   Biological Paternal Grandmother has had positive diagnosis for Early-Onset Alzheimer's Disease
+              </td>
+
+              <td class="pbm col-md-2">
+                <div class="switch switch-square" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>">
+                   <input type="checkbox"  value="true" name="pgramp">
+                </div>
+              </td>
+            </tr>
+          </table> 
+
+  <button type="submit" class="btn btn-primary col-md-2 col-md-offset-5 ">Submit</button>
+</form>
+</div>
+</div>
+</div>
