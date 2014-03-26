@@ -125,7 +125,7 @@ end
     erb :welcome
   end
   get "/validates_age" do 
-  	if params[:age].to_i >= 0 && !params[:name].to_s.empty?
+  	if !params[:age].to_s.empty? && !params[:name].to_s.empty?
 	  	if params[:age].to_i > 64
 	  		erb :too_old
 	  	else
