@@ -124,16 +124,16 @@ end
   get "/" do
     erb :welcome
   end
-  get "/validates_age" do
+  get "/validates_age" do 
   	if params[:age].to_i >= 0 && !params[:name].to_s.empty?
 	  	if params[:age].to_i > 64
 	  		erb :too_old
 	  	else
-	  		redirect to("/analyze?name=#{params[:name]}&age=#{params[:age]}")
+	  		redirect  "/analyze?name=#{params[:name]}&age=#{params[:age]}" 
 	  	end
-	 else 
+	  else 
 	 	"<h1>You need to input both your name and age, in order to continue.</h1>"
-	 end
+	  end
   end
   
   get '/analyze' do
