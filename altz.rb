@@ -172,7 +172,7 @@ end
 	 	User.father = "false"
 	end
  
-	if params[:app]
+	if params[:mother]
 		User.mother = params[:mother]
 	else
 	 	User.mother = "false"

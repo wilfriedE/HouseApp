@@ -1,7 +1,30 @@
+<% puts @user.inspect %>
 <% if @user.high_risk && @user.low_risk  %>
-
-<p> Hello, <%= @user.name %>! You are <%= @user.low_risk %>% to <%= @user.high_risk %>% more likely than the general population to develop or become diagnosed with early-onset  Alzheimer's Disease. Please follow up with a genetic counselor.</p>
+  <script type="text/javascript" src="javascripts/jquery.noUiSlider.min.js"></script>
  
+<br/><br/>
+<p> Hello, <%= @user.name %>! You are<% if @user.low_risk > @user.high_risk %>
+ <%= @user.high_risk %>% to <%= @user.low_risk %>
+<% else %>
+
+<%= @user.low_risk %>% to <%= @user.high_risk %>
+
+<%  end  %>% more likely than the general population to develop or become diagnosed with early-onset  Alzheimer's Disease. Please follow up with a genetic counselor.</p>
+
+   <script type="text/javascript">
+$("#sliderx").noUiSlider({
+	start: [<% if @user.low_risk > @user.high_risk %>
+	<%= @user.low_risk %>,<%= @user.high_risk %>
+<% else %>
+ <%= @user.high_risk %> , <%= @user.low_risk %>
+<%  end  %>], 
+	range: {
+		'min':  [ 0 ],
+		'max':  [ 100 ]
+	}
+});
+  </script>
+
 <% else %>
 <p> Hello, <%= @user.name %>! You are <%= @user.risk %> % more likely than the general population to develop or become diagnosed with early-onset Alzheimer's Disease. Please follow up with a genetic counselor. </p>
 <% end %>
@@ -13,3 +36,4 @@
   <div class="col-md-4 col-md-offset-4 ">
           <a href="/" class="btn btn-block btn-lg btn-info">Return Home</a>
   </div>
+
