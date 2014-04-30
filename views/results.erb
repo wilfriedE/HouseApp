@@ -1,32 +1,19 @@
 <% puts @user.inspect %>
 <% if @user.high_risk && @user.low_risk  %>
-  <script type="text/javascript" src="javascripts/jquery.noUiSlider.min.js"></script>
- 
+
 <br/><br/>
 <p> Hello, <%= @user.name %>! You are<% if @user.low_risk > @user.high_risk %>
- <%= @user.high_risk %>% to <%= @user.low_risk %>
+ <strong><%= @user.high_risk %>% to <strong><%= @user.low_risk %>%</strong>
 <% else %>
 
-<%= @user.low_risk %>% to <%= @user.high_risk %>
+<strong><%= @user.low_risk %>%</strong> to <strong><%= @user.high_risk %>%</strong>
 
-<%  end  %>% more likely than the general population to develop or become diagnosed with early-onset  Alzheimer's Disease. Please follow up with a genetic counselor.</p>
-
-   <script type="text/javascript">
-$("#sliderx").noUiSlider({
-	start: [<% if @user.low_risk > @user.high_risk %>
-	<%= @user.low_risk %>,<%= @user.high_risk %>
-<% else %>
- <%= @user.high_risk %> , <%= @user.low_risk %>
-<%  end  %>], 
-	range: {
-		'min':  [ 0 ],
-		'max':  [ 100 ]
-	}
-});
-  </script>
+<%  end  %> more likely than the general population to develop or become diagnosed with early-onset  Alzheimer's Disease. Please follow up with a genetic counselor.</p>
 
 <% else %>
-<p> Hello, <%= @user.name %>! You are <%= @user.risk %> % more likely than the general population to develop or become diagnosed with early-onset Alzheimer's Disease. Please follow up with a genetic counselor. </p>
+
+<p> Hello, <%= @user.name %>! You are <strong><%= @user.risk %> % </strong>more likely than the general population to develop or become diagnosed with early-onset Alzheimer's Disease. Please follow up with a genetic counselor. </p>
+ 
 <% end %>
 
 <% if @user.app.to_bool == true  %>

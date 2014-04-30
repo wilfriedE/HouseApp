@@ -124,6 +124,9 @@ end
   get "/" do
     erb :welcome
   end
+  get "/example" do
+    erb :example
+  end
   get "/validates_age" do 
   	if !params[:age].to_s.empty? && !params[:name].to_s.empty?
 	  	if params[:age].to_i > 64
